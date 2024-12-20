@@ -138,7 +138,7 @@ def small_binary_cifar10(root, augment=False):
 @_add_dataset   
 def cifar100(root, augment=False):
     transform_train, transform_test = _get_cifar_transforms(augment=augment)
-    train_set = torchvision.datasets.CIFAR100(root=root, train=True, download=True, transform=transform_train) #original download=False
+    train_set = torchvision.datasets.CIFAR100(root=root, train=True, download=False, transform=transform_train) #original download=False
     test_set  = torchvision.datasets.CIFAR100(root=root, train=False, download=False, transform=transform_test)
     return train_set, test_set
 
